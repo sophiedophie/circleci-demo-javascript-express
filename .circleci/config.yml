@@ -36,6 +36,6 @@ jobs:
       - run:
           name: Glob all test in this repo
           command: |
-            export TEST_FILES=$(circleci tests glob './client/**/__tests__/*.spec.js' './client/**/**/__tests__/*.spec.js' | circleci tests split)
+            export TEST_FILES=$(circleci tests glob './client/**/__tests__/*.spec.js' './client/**/**/__tests__/*.spec.js' | circleci tests split --split-by=timings)
             echo ${TEST_FILES}
             npm run echo
