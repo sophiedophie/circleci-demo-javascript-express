@@ -36,6 +36,6 @@ jobs:
       - run:
           name: Glob all test in this repo
           command: |
-            export TEST_FILES=$(circleci tests split --total=2 test_filenames.txt)
+            export TEST_FILES=$(circleci tests split --total=2 ./test_filenames.txt)
             echo ${TEST_FILES}
             npm run echo
